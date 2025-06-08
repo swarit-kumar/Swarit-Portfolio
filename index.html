@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swarit-Portfolio</title>
+  <link rel="preload" as="image" href="cloud2-large.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+
+  <!-- GSAP Plugins after core library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <span></span>
+      <div class="logo">Swarit</div>
+      <ul class="menu">
+        <li><a href="#about" onclick="scrollToSection(event, 'about')">about</a></li>
+        <li><a href="#work" onclick="scrollToSection(event, 'projects')">projects</a></li>
+        <li><a href="#contactme" onclick="scrollToSection(event, 'contact')">contact</a></li>
+      </ul>
+      <div class="btn1">
+        <a href="https://github.com/swarit-kumar" target="_blank"
+          style="text-decoration: none; color: inherit;">Github</a>
+      </div>
+      <div class="btn">
+        <a href="http://www.linkedin.com/in/swarit-kumar" target="_blank"
+          style="text-decoration: none; color: inherit;">linkedIn</a>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+  <!-- Landing Section with window.png -->
+  <!-- Zoom window image -->
+  <div class="hero-zoom">
+    <img src="./images/window copy.webp" alt="Window" class="hero-img" id="heroImage" />
+  </div>
+
+  <script>
+    // JavaScript to handle image replacement on mobile screens
+    function updateHeroImage() {
+      const heroImage = document.getElementById('heroImage');
+      if (window.innerWidth <= 1024) { // Mobile screen width
+        heroImage.src = './images/window (1).png';
+      } else {
+        heroImage.src = './images/window copy.webp';
+      }
+    }
+
+    // Initial check
+    updateHeroImage();
+
+    // Update on window resize
+    window.addEventListener('resize', updateHeroImage);
+  </script>
+
+  <!-- First scroll zone (zoom only) -->
+  <div class="zoomScroll"></div>
+
+  <!-- Second scroll zone (parallax trigger) -->
+  <div class="scrollDist"></div>
+
+
+  <!-- Parallax Section -->
+  <main>
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <mask id="m">
+        <g class="cloud1">
+          <rect fill="#ffff" width="100%" height="801" y="799" />
+          <image xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1200" height="800" />
+        </g>
+      </mask>
+
+      <image class="sky" xlink:href="https://assets.codepen.io/721952/sky.jpg" width="1200" height="590" />
+      <image class="mountBg"
+        xlink:href="./images/mountBgfinal.png"
+        width="1200" height="800" />
+      <image class="mountMg" xlink:href="https://assets.codepen.io/721952/mountMg.png" width="1200" height="800" />
+      <image class="cloud2" xlink:href="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"
+        loading="lazy" />
+      <image class="mountFg" xlink:href="https://assets.codepen.io/721952/mountFg.png" width="1200" height="800" />
+      <image class="cloud1" xlink:href="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800" />
+      <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800" />
+      <!-- Replace this in your SVG section -->
+      <text fill="#fff" x="450" y="250">EXPLORE</text>
+
+      <g mask="url(#m)">
+        <rect fill="white" width="100%" height="100%" />
+        <text x="450" y="250" fill="#162a43">FURTHER</text>
+      </g>
+
+
+    </svg>
+
+
+
+  </main>
+
+
+  <!-- New About Me Section -->
+  <div id="about" class="about">
+    <div class="container">
+      <div class="about-me-container">
+        <div class="about-me-title" style="color: white;">
+          About <br> Swarit Kumar
+        </div>
+
+        <div class="about-me-flex-container">
+          <div class="about-me-image">
+            <div class="back-div"></div>
+            <div class="black-image"><img src="./images/about me1.jpg" alt="black"></div>
+            <div class="main-image"><img src="./images/about me1.jpg" alt="swarit"></div>
+          </div>
+          <div class="about-me-content">
+
+            <div class="logo" style="margin-bottom: 0; "><img src="./images/logo-removebg-preview.png" alt="swarit"></div>
+            <div class="pre-container">
+              <div class="pre-cover">
+              <div class="spotlight"></div>
+              <span>  Hover here to</span>
+              <span> Explore About Me!</span>     
+              </div>
+
+
+              <pre>
+              <span class="variable">name</span> <span class="character">=</span> <span class="string">"Swarit Kumar"</span>
+              <span class="variable">profession</span> <span class="character">=</span> <span class="string">"B-Tech in Computer Science at IIIT-Delhi"</span>
+              <span class="variable">experties</span> <span class="character">=</span> <span class="string">"Data Structure and Algorithm,"</span>
+              <span class="string">             Competitive Programming, Design"</span>
+              
+              <span class="variable">skills</span> <span class="character">=</span> <span class="bracket">{</span>
+                <span class="string">"C++ | Java | Python | C |OOP"</span><span class="character">,</span>
+                <span class="string">"HTML/CSS | JavaScript | Jawa Swing | MYSQL"</span><span class="character">,</span>
+                <span class="string">"Unity | Git/Github | Graphic Design"</span><span class="character">,</span>
+                <span class="string">"Operating System | Database Management System" </span><span class="character">,</span>
+                <span class="string">"Autodesk Fusion 360 | Figma" </span><span class="character">,</span>
+                <span class="string">"Adobe Illustrator | Adobe Photoshop" </span>
+              <span class="bracket">}</span>
+              
+              <span class="variable">hobbies</span> <span class="character">=</span> <span class="bracket">[</span>
+                <span class="string">"Software Application Development"</span><span class="character">,</span>
+                <span class="string">"Graphic Designing"</span><span class="character">,</span>
+                <span class="string">"Learning New Things"</span><span class="character">,</span>
+              <span class="bracket">]</span>
+                    </pre>
+            </div>
+
+            <style>
+              @media (max-width: 768px) {
+              .pre-container .pre-cover, 
+              .pre-container .spotlight {
+                display: none;
+              }
+              .pre-container pre {
+                display: block;
+              }
+              
+              }
+
+            </style>
+          </div>
+        </div>
+
+        <div class="mail-button mail-button2">
+          <a href="mailto:swarit23540@iiitd.ac.in"><img
+              src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/20391be8bf1ed24ef0e5da066bf68a5f6ee78fa1/images/mail.svg"
+              alt="mail"></a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- work section -->
+  <div id="work" class="work">
+    <div class="title">MY PROJECTS</div>
+    <div class="container50">
+
+      <div class="slide50">
+        <div class="item50 video-item">
+          <video autoplay muted loop class="background-video50" playsinline>
+            <source src="./images/academiahub.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content50">
+            <div class="name50">AcademiaHub</div>
+            <div class="des50">College ERP Portal – A user-friendly CLI system where students manage courses and grades,
+              professors handle teaching and feedback, and admins streamline academic records.</div>
+            <button
+              onclick="window.open('https://github.com/swarit-kumar/AcademiaHub-College-ERP-Portal.git', '_blank')">Github
+              Link</button>
+          </div>
+        </div>
+
+
+
+        <div class="item50 video-item">
+          <video autoplay muted loop class="background-video50" playsinline>
+            <source src="./images/Untitled design (3).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content50" style="background-color: rgba(0, 0, 0, 0.167);">
+            <div class="name50">Angry-Birds Clone</div>
+            <div class="des50">Developed an Angry Birds-style game using libGDX in Java with physics-based motion, Box2D
+              collision detection, and an interactive slingshot for aiming. Optimized performance with efficient
+              rendering.</div>
+            <button onclick="window.open('https://github.com/Swarit23540/Angry-Bird-Game.git', '_blank')">Github
+              Link</button>
+          </div>
+        </div>
+
+
+        <div class="item50 video-item">
+          <video autoplay muted loop class="background-video50" playsinline>
+            <source src="./images/Untitled design (4).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content50" style="background-color: rgba(0, 0, 0, 0.167);">
+            <div class="name50">PillPal</div>
+            <div class="des50">Built a smart application to detect pills and send timely medication reminders, helping
+              users manage their health more effectively.</div>
+            <button
+              onclick="window.open('https://github.com/swarit-kumar/AcademiaHub-College-ERP-Portal.git', '_blank')">Github
+              Link</button>
+          </div>
+        </div>
+
+        <div class="item50" style="background-image: url(./images/dbms.png);">
+          <div class="content50">
+            <div class="name50">Nova Bank</div>
+            <div class="des50">Developed a full-stack banking management system with secure transactions, user
+              dashboards, and role-based access for clients, staff, and admins.</div>
+            <button onclick="window.open('https://github.com/Satvik1924/BankingSystemDBMS.git', '_blank')">See
+              More</button>
+          </div>
+        </div>
+
+        <div class="item50 video-item">
+          <video autoplay muted loop class="background-video50" playsinline>
+            <source src="./images/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content50" style="background-color: rgba(0, 0, 0, 0.167);">
+            <div class="name50">Byte-Me</div>
+            <div class="des50">A CLI-based food ordering system for college canteens, featuring smart order tracking,
+              VIP handling, and admin-customer interfaces.</div>
+            <button
+              onclick="window.open('https://github.com/Swarit23540/Byte-Me-Food-Ordering-App-.git', '_blank')">Github
+              Link</button>
+          </div>
+        </div>
+        <div class="item50 video-item">
+          <video autoplay muted loop class="background-video50" playsinline>
+            <source src="./images/wellness.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content50" style="background-color: rgba(0, 0, 0, 0.167);">
+            <div class="name50">Wellness +</div>
+            <div class="des50">Designed a high-fidelity Figma prototype for a medical app, enhancing user experience for
+              appointment scheduling and health record access with an intuitive and user-friendly interface.</div>
+            <button
+              onclick="window.open('https://www.figma.com/proto/35cIrZ7jy8Y5gh17VDb2gP/Untitled?node-id=1-549&starting-point-node-id=1%3A549&t=5ygbJYjoGpsOlPAQ-1', '_blank')">Github
+              Link</button>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="button50">
+        <button class="prev50"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next50"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="contactme" class="contactme">
+    <header>
+      <h1>Contact us</h1>
+    </header>
+
+    <div id="form">
+
+      <div class="fish" id="fish"></div>
+      <div class="fish" id="fish2"></div>
+
+      <form id="waterform" method="post">
+
+        <div class="formgroup" id="name-form">
+          <label for="name">Your name*</label>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div class="formgroup" id="email-form">
+          <label for="email">Your e-mail*</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <div class="formgroup" id="message-form">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <input type="submit" value="Send your message!" />
+      </form>
+    </div>
+
+    <div class="myfooter">
+      <div class="logos">
+        <a href="http://www.linkedin.com/in/swarit-kumar" target="_blank">
+          <img src="https://img.icons8.com/?size=100&id=67570&format=png&color=000000" alt="LinkedIn"
+            style="width: 50px;height: 50px;margin-right: 10px;">
+        </a>
+        <a href="mailto:swarit.kumar2005@gmail.com">
+          <img src="https://img.icons8.com/?size=100&id=EgRndDDLh8kS&format=png&color=000000" alt="Gmail"
+            style="width:40px; height:40px;justify-content: center;align-items: center;padding-bottom: 12px;">
+        </a>
+      </div>
+
+      <div class="copyright" style="x: 30%;">
+        copyright @ SwaritKumar 2025
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Essential GSAP Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+  <!-- ScrollSmoother for smooth scrolling effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+
+
+  <!-- Your custom script file -->
+  <script src="script.js"></script>
+</body>
+
+</html>
