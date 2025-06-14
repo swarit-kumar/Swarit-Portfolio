@@ -2040,39 +2040,3 @@ pre .number {
         left: 100%;
     }
 }
-
-
-
-@media (max-width: 768px) {
-  main {
-    position: static !important;
-    height: auto !important;
-    width: 100vw !important;
-    z-index: 1 !important;
-    background: #162a43 !important;
-    overflow: visible !important;
-    display: block !important;
-  }
-  main svg {
-    position: static !important;
-    width: 100vw !important;
-    height: auto !important;
-    min-width: unset !important;
-    min-height: unset !important;
-    left: 0 !important;
-    top: 0 !important;
-  }
-  .hero-zoom {
-    position: static !important;
-    height: auto !important;
-    width: 100vw !important;
-    min-height: 200px !important;
-    max-height: 50vh !important;
-    z-index: 1 !important;
-    pointer-events: auto !important;
-  }
-  .zoomScroll, .scrollDist {
-    height: 50vh !important;
-    min-height: 100px !important;
-  }
-}
